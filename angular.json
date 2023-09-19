@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+          
             "outputPath": "dist/cabinet-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -30,10 +31,26 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/bootstrap.min.css",
               "src/styles.scss",
               "src/app/composants/form/form.component.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/jquery-3.7.0.min.js",
+              "src/assets/js/off-canvas.js",
+              "src/assets/js/hoverable-collapse.js",
+              "src/assets/vendors/js/vendor.bundle.base.js",
+              "src/assets/vendors/chart.js/Chart.min.js",
+              "src/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js",
+              "src/assets/vendors/progressbar.js/progressbar.min.js",
+              "src/assets/js/template.js",
+              "src/assets/js/settings.js",
+              "src/assets/js/todolist.js",
+              "src/assets/js/jquery.cookie.js",
+              "src/assets/js/dashboard.js",
+              "src/assets/js/Chart.roundedBarCharts.js"
+
+            ]
           },
           "configurations": {
             "production": {
@@ -41,12 +58,12 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "1500kb",
+                  "maximumError": "2000kb"
                 }
               ],
               "outputHashing": "all"

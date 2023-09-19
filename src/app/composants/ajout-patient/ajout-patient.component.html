@@ -1,0 +1,105 @@
+<div class="content-wrapper">
+    <div class="row">
+      <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Ajout patient</h4>
+            <p class="card-description">
+             Infos personnelles
+            </p>
+            <form class="forms-sample" (submit)="submitForm()">
+              <div class="form-group">
+                <label>ID</label>
+                <p > {{ lastAddedPatientId ? lastAddedPatientId + 1 : '1' }}</p>
+              </div>
+              <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" class="form-control" id="nom" name="nom" 
+                [(ngModel)]="nom" placeholder="Nom">
+              </div>
+              <div class="form-group">
+                <label for="prenom">Prenom</label>
+                <input type="text" class="form-control" id="prenom" name="prenom"
+                [(ngModel)]="prenom" placeholder="Prenom">
+              </div>
+              <div class="form-group">
+                <label for="cin">Cin</label>
+                <input type="text" class="form-control" id="cin" name="cin"
+                [(ngModel)]="cin" placeholder="Cin">
+              </div>
+              <div class="form-group">
+                <label for="dateNaissance">Date de naissance</label>
+                <input type="date" class="form-control"name="dateNaissance"
+                [(ngModel)]="dateNaissance" id="dateNaissance" >
+              </div>
+              <div class="form-group">
+                <label for="tel">Tel</label>
+                <input type="text" class="form-control" id="tel" name="tel"
+                [(ngModel)]="tel" placeholder="06....">
+              </div>
+              <div class="form-group">
+                <label for="adresse">Adresse</label>
+                <input type="text" class="form-control" id="adresse" name="adresse"
+                [(ngModel)]="adresse" placeholder="Adresse">
+              </div>
+              <div class="form-group">
+                <label for="profession">Profession</label>
+                <input type="text" class="form-control" id="profession" name="profession"
+                [(ngModel)]="profession" placeholder="Profession">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputUsername1">Situation Familiale</label>
+                <div class="d-flex">
+                  <div class="form-check me-5">
+                  <input class="form-check-input" type="radio" name="situationFamiliale" id="radioCelibataire" 
+                  value="Celibataire" [(ngModel)]="situationFamiliale">
+                  <label class="form-check-label" for="radioCelibataire">
+                    Célibataire
+                  </label>
+                </div>
+                <div class="form-check me-5">
+                  <input class="form-check-input" type="radio" name="situationFamiliale" id="radioMarie"
+                   value="Marie" [(ngModel)]="situationFamiliale">
+                  <label class="form-check-label" for="radioMarie">
+                    Marié(e)
+                  </label>
+                </div>
+                <div class="form-check me-5">
+                  <input class="form-check-input" type="radio" name="situationFamiliale" id="radioDivorce"
+                   value="Divorce" [(ngModel)]="situationFamiliale">
+                  <label class="form-check-label" for="radioDivorce">
+                    Divorcé(e)
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="assurance">Assurance</label>
+              <select class="form-control" id="assurance" name="assurance" [(ngModel)]="assurance">
+                <option value="CNSS">CNSS</option>
+                <option value="CNOPS">CNOPS</option>
+                <option value="Autre">Autre</option>
+              </select>
+            </div>
+            
+              <div class="form-group">
+                <label for="antecedantMedicaux">Antécedants médicaux</label>
+                <textarea class="form-control" id="antecedantMedicaux" name="antecedantMedicaux"
+                [(ngModel)]="antecedantMedicaux" placeholder="Antécedants médicaux" ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="allergie">Allergie</label>
+                <input type="text" class="form-control" id="allergie" name="allergie"
+                [(ngModel)]="allergie" placeholder="Allergie">
+              </div>
+           
+             
+              <button type="submit" class="btn btn-primary me-2">Ajouter</button>
+              <button class="btn btn-light">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+</div>
